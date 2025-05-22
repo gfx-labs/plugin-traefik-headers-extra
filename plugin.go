@@ -1,4 +1,3 @@
-// Package plugindemo a demo plugin.
 package main
 
 import (

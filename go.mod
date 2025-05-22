@@ -1,4 +1,4 @@
-module github.com/traefik/plugindemowasm
+module github.com/gfx-labs/plugin-traefik-headers-extra
 
 go 1.21
 
