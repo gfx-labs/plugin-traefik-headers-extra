@@ -1,4 +1,4 @@
-project_name: plugindemowasm
+project_name: headersextra
 
 builds:
   - binary: plugin.wasm
@@ -28,7 +28,7 @@ changelog:
       - '^tests:'
 
 archives:
-  - id: plugindemowasm
+  - id: headersextra
     name_template: '{{ .ProjectName }}_v{{ .Version }}'
     format: zip
     files:
