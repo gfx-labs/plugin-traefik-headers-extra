@@ -1,11 +1,11 @@
-displayName: Demo Plugin WASM
+displayName: Headers Extra Plugin
 runtime: wasm
 type: middleware
 iconPath: .assets/icon.png
 
-summary: '[Demo WASM] Add Request Header'
+summary: 'Extra header manipulation'
 
 testData:
-  Headers:
-    X-Demo: test
-    X-URL: '{{URL}}'
+  copy:
+    - from: "Origin"
+      to: "X-Copied-Origin"
