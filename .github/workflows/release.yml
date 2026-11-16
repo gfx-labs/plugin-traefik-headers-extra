@@ -28,8 +28,8 @@ jobs:
 
       - name: Install tinygo
         run: |
-          wget -q https://github.com/tinygo-org/tinygo/releases/download/v${TINYGO_VERSION}/tinygo_${TINYGO_VERSION}_amd64.deb
-          sudo dpkg -i tinygo_${TINYGO_VERSION}_amd64.deb
+          wget -qP /tmp https://github.com/tinygo-org/tinygo/releases/download/v${TINYGO_VERSION}/tinygo_${TINYGO_VERSION}_amd64.deb
+          sudo dpkg -i /tmp/tinygo_${TINYGO_VERSION}_amd64.deb
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
