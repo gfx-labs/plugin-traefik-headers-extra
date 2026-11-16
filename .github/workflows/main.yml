@@ -11,7 +11,8 @@ jobs:
     name: Main process
     runs-on: ubuntu-latest
     env:
-      GO_VERSION: 1.21
+      GO_VERSION: '1.23'
+      TINYGO_VERSION: 0.34.0
       GOLANGCI_LINT_VERSION: v1.55.2
 
     steps:
@@ -29,7 +30,9 @@ jobs:
           go-version: ${{ env.GO_VERSION }}
 
       - name: Install tinygo
-        uses: acifani/setup-tinygo@v2
+        run: |
+          wget -q https://github.com/tinygo-org/tinygo/releases/download/v${TINYGO_VERSION}/tinygo_${TINYGO_VERSION}_amd64.deb
+          sudo dpkg -i tinygo_${TINYGO_VERSION}_amd64.deb
 
       # https://golangci-lint.run/usage/install#other-ci
       - name: Install golangci-lint ${{ env.GOLANGCI_LINT_VERSION }}
